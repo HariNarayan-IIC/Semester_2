@@ -1,0 +1,132 @@
+<resources>
+    <string name="app_name">DropDownMenu</string>
+    <string name="title">Assignment 1</string>
+    <string name="semester">Select Sem: </string>
+    <string-array name="Bachelors_sem_list">
+        <item>Semester 1</item>
+        <item>Semester 2</item>
+        <item>Semester 3</item>
+        <item>Semester 4</item>
+        <item>Semester 5</item>
+        <item>Semester 6</item>
+    </string-array>
+
+    <string-array name="Masters_sem_list">
+        <item>Semester 1</item>
+        <item>Semester 2</item>
+        <item>Semester 3</item>
+        <item>Semester 4</item>
+    </string-array>
+
+    <string-array name="BSc_sem1_subjects">
+        <item>Programming using python</item>
+        <item>Basic circuit theory and network analysis</item>
+        <item>Mathematical foundation for electronics</item>
+        <item>English-A</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="Sem1_marks">
+        <item>10</item>
+        <item>9</item>
+        <item>9</item>
+        <item>8</item>
+        <item></item>
+    </string-array>
+
+    <string name="BSc_sem1_SGPA">9.09</string>
+
+    <string-array name="BSc_sem2_subjects">
+        <item>Database management system</item>
+        <item>Semiconductor devices</item>
+        <item>Applied physics</item>
+        <item>Environmental science</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="Sem2_marks">
+        <item>9</item>
+        <item>9</item>
+        <item>9</item>
+        <item>9</item>
+        <item></item>
+    </string-array>
+
+    <string name="BSc_sem2_SGPA">9</string>
+
+    <string-array name="BSc_sem3_subjects">
+        <item>Computer networks</item>
+        <item>Electronic circuits</item>
+        <item>Digital electronics and VHDL</item>
+        <item>C programming and Data structures</item>
+        <item>Robotics</item>
+    </string-array>
+
+    <string-array name="Sem3_marks">
+        <item>9</item>
+        <item>8</item>
+        <item>10</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+    <string name="BSc_sem3_SGPA">8.79</string>
+
+    <string-array name="BSc_sem4_subjects">
+        <item>Information security and cyber laws</item>
+        <item>Operational Amplifiers and applications</item>
+        <item>Signals and systems</item>
+        <item>Electronic instrumentation</item>
+        <item>Mobile application development</item>
+    </string-array>
+
+    <string-array name="Sem4_marks">
+        <item>9</item>
+        <item>7</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="BSc_sem4_SGPA">8.07</string>
+
+    <string-array name="BSc_sem5_subjects">
+        <item>Microprocessors and microcontrollers</item>
+        <item>Electromagnetics</item>
+        <item>Semiconductor fabrication and characterization</item>
+        <item>Computer networks</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="Sem5_marks">
+        <item>9</item>
+        <item>7</item>
+        <item>8</item>
+        <item>8</item>
+        <item></item>
+    </string-array>
+
+    <string name="BSc_sem5_SGPA">8</string>
+
+    <string-array name="BSc_sem6_subjects">
+        <item>Photonics</item>
+        <item>Communication electronics</item>
+        <item>Modern communication systems</item>
+        <item>Embedded systems</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="Sem6_marks">
+        <item>9</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item></item>
+    </string-array>
+
+    <string name="BSc_sem6_SGPA">9</string>
+
+    <string name="Subject">Paper</string>
+    <string name="Marks">Grade points</string>
+    <string name="SGPA">SGPA : </string>
+</resources>
