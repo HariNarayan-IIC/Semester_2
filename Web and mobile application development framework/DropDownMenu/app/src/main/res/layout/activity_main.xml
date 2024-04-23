@@ -94,7 +94,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:background="@drawable/cell_border"
                         android:text="@string/Subject"
                         android:textSize="18sp"
 
@@ -107,7 +106,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:background="@drawable/cell_border"
                         android:text="@string/Marks"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -121,15 +119,13 @@
                     <TextView
                         android:id="@+id/Sub1"
                         android:layout_width="0dp"
-                        android:background="@drawable/cell_border"
-                        android:layout_height="36dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/Mark1"
                         android:layout_width="0dp"
-                        android:layout_height="36dp"
-                        android:background="@drawable/cell_border"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textAlignment="center" />
                 </TableRow>
@@ -141,16 +137,14 @@
                     <TextView
                         android:id="@+id/Sub2"
                         android:layout_width="0dp"
-                        android:background="@drawable/cell_border"
-                        android:layout_height="36dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/Mark2"
                         android:layout_width="0dp"
-                        android:layout_height="36dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@drawable/cell_border"
                         android:textAlignment="center" />
                 </TableRow>
 
@@ -161,16 +155,14 @@
                     <TextView
                         android:id="@+id/Sub3"
                         android:layout_width="0dp"
-                        android:background="@drawable/cell_border"
-                        android:layout_height="36dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/Mark3"
                         android:layout_width="0dp"
-                        android:layout_height="36dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@drawable/cell_border"
                         android:textAlignment="center" />
                 </TableRow>
 
@@ -181,16 +173,14 @@
                     <TextView
                         android:id="@+id/Sub4"
                         android:layout_width="0dp"
-                        android:background="@drawable/cell_border"
-                        android:layout_height="36dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/Mark4"
                         android:layout_width="0dp"
-                        android:layout_height="36dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@drawable/cell_border"
                         android:textAlignment="center" />
                 </TableRow>
 
@@ -201,15 +191,13 @@
                     <TextView
                         android:id="@+id/Sub5"
                         android:layout_width="0dp"
-                        android:background="@drawable/cell_border"
-                        android:layout_height="36dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/Mark5"
                         android:layout_width="0dp"
-                        android:layout_height="36dp"
-                        android:background="@drawable/cell_border"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textAlignment="center" />
 
