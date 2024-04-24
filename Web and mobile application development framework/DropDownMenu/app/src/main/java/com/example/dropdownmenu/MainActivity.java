@@ -25,49 +25,100 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        Spinner mySpinner = findViewById(R.id.mySpinner);
-        mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        Spinner courseSpinner = findViewById(R.id.courseSpinner);
+        courseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String[] semester= getResources().getStringArray(R.array.Bachelors_sem_list);
-                String selectedItem= parent.getItemAtPosition(position).toString();
-                if (selectedItem.equals(semester[0])){
-                    printUponSelection(R.array.BSc_sem1_subjects, R.array.Sem1_marks, R.string.BSc_sem1_SGPA);
-                }
-                else if (selectedItem.equals(semester[1])){
-                    printUponSelection(R.array.BSc_sem2_subjects, R.array.Sem2_marks, R.string.BSc_sem2_SGPA);
-                }
-                else if (selectedItem.equals(semester[2])){
-                    printUponSelection(R.array.BSc_sem3_subjects, R.array.Sem3_marks, R.string.BSc_sem3_SGPA);
-                }
-                else if (selectedItem.equals(semester[3])){
-                    printUponSelection(R.array.BSc_sem4_subjects, R.array.Sem4_marks, R.string.BSc_sem4_SGPA);
-                }
-                else if (selectedItem.equals(semester[4])){
-                    printUponSelection(R.array.BSc_sem5_subjects, R.array.Sem5_marks, R.string.BSc_sem5_SGPA);
-                }
-                else{
-                    printUponSelection(R.array.BSc_sem6_subjects, R.array.Sem6_marks, R.string.BSc_sem6_SGPA);
-                }
+                String selectedItem = parent.getItemAtPosition(position).toString();
+                onCourseSelection(selectedItem);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                // Handle case where nothing is selected
             }
         });
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Bachelors_sem_list, android.R.layout.simple_spinner_item);
+    }
+
+    public void onCourseSelection(String courseSelected) {
+        Spinner semSpinner = findViewById(R.id.semSpinner);
+        String[] courses = getResources().getStringArray(R.array.Courses);
+        ArrayAdapter<CharSequence> adapter;
+
+        if (courseSelected.equals(courses[0])) {
+            adapter = ArrayAdapter.createFromResource(this, R.array.Bachelors_sem_list, android.R.layout.simple_spinner_item);
+        } else if (courseSelected.equals(courses[1])) {
+            adapter = ArrayAdapter.createFromResource(this, R.array.Masters_sem_list, android.R.layout.simple_spinner_item);
+        } else {
+            // Handle the case where no course is selected
+            return;
+        }
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mySpinner.setAdapter(adapter);
+        semSpinner.setAdapter(adapter);
+    }
+
+
+    public void onButtonClick(View view){
+
+        String[] semester= getResources().getStringArray(R.array.Bachelors_sem_list);
+        String[] courses = getResources().getStringArray(R.array.Courses);
+        Spinner semSpinner = findViewById(R.id.semSpinner);
+        Spinner courseSpinner = findViewById(R.id.courseSpinner);
+        String selectedSem = semSpinner.getSelectedItem().toString();
+        String selectedCourse = courseSpinner.getSelectedItem().toString();
+
+        if (selectedSem.equals(semester[0]) & selectedCourse.equals(courses[0])){
+            printUponSelection(R.array.BSc_sem1_subjects, R.array.BSc_sem1_marks, R.string.BSc_sem1_SGPA);
+        }
+        else if (selectedSem.equals(semester[1]) & selectedCourse.equals(courses[0])){
+            printUponSelection(R.array.BSc_sem2_subjects, R.array.BSc_sem2_marks, R.string.BSc_sem2_SGPA);
+        }
+        else if (selectedSem.equals(semester[2]) & selectedCourse.equals(courses[0])){
+            printUponSelection(R.array.BSc_sem3_subjects, R.array.BSc_sem3_marks, R.string.BSc_sem3_SGPA);
+        }
+        else if (selectedSem.equals(semester[3]) & selectedCourse.equals(courses[0])){
+            printUponSelection(R.array.BSc_sem4_subjects, R.array.BSc_sem4_marks, R.string.BSc_sem4_SGPA);
+        }
+        else if (selectedSem.equals(semester[4]) & selectedCourse.equals(courses[0])){
+            printUponSelection(R.array.BSc_sem5_subjects, R.array.BSc_sem5_marks, R.string.BSc_sem5_SGPA);
+        }
+        else if (selectedSem.equals(semester[5]) & selectedCourse.equals(courses[0])){
+            printUponSelection(R.array.BSc_sem5_subjects, R.array.BSc_sem6_marks, R.string.BSc_sem5_SGPA);
+        }
+
+        else if (selectedSem.equals(semester[0]) & selectedCourse.equals(courses[1])){
+            printUponSelection(R.array.MSc_sem1_subjects, R.array.MSc_sem1_marks, R.string.MSc_sem1_SGPA);
+        }
+        else if (selectedSem.equals(semester[1]) & selectedCourse.equals(courses[1])){
+            printUponSelection(R.array.MSc_sem2_subjects, R.array.MSc_sem2_marks, R.string.MSc_sem2_SGPA);
+        }
+        else if (selectedSem.equals(semester[2]) & selectedCourse.equals(courses[1])){
+            printUponSelection(R.array.MSc_sem3_subjects, R.array.MSc_sem3_marks, R.string.MSc_sem3_SGPA);
+        }
+        else if (selectedSem.equals(semester[3]) & selectedCourse.equals(courses[1])){
+            printUponSelection(R.array.MSc_sem4_subjects, R.array.MSc_sem4_marks, R.string.MSc_sem4_SGPA);
+        }
+
+        else{
+            return;
+        }
     }
 
     private void printUponSelection(int subjectID, int marksID, int sgpaID){
-
+        TextView textView;
         String[] subjects = getResources().getStringArray(subjectID);
 
-        TextView textView = findViewById(R.id.Sub1);
+        textView = findViewById(R.id.Col_name_1);
+        textView.setText(R.string.Subject);
+
+        textView = findViewById(R.id.Col_name_2);
+        textView.setText(R.string.Marks);
+
+        textView = findViewById(R.id.textView4);
+        textView.setText(R.string.SGPA);
+
+        textView = findViewById(R.id.Sub1);
         textView.setText(subjects[0]);
         textView = findViewById(R.id.Sub2);
         textView.setText(subjects[1]);

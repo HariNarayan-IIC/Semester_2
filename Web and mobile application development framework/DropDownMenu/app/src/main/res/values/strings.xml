@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">DropDownMenu</string>
     <string name="title">Assignment 1</string>
+    <string name="course">Select Course:</string>
     <string name="semester">Select Sem: </string>
+    <string name="button">Display Score</string>
+
+    <string-array name="Courses">
+        <item>BSc Electronics</item>
+        <item>MSc Informatics</item>
+    </string-array>
+
     <string-array name="Bachelors_sem_list">
         <item>Semester 1</item>
         <item>Semester 2</item>
@@ -23,15 +31,15 @@
         <item>Basic circuit theory and network analysis</item>
         <item>Mathematical foundation for electronics</item>
         <item>English-A</item>
-        <item></item>
+        <item> </item>
     </string-array>
 
-    <string-array name="Sem1_marks">
+    <string-array name="BSc_sem1_marks">
         <item>10</item>
         <item>9</item>
         <item>9</item>
         <item>8</item>
-        <item></item>
+        <item> </item>
     </string-array>
 
     <string name="BSc_sem1_SGPA">9.09</string>
@@ -41,15 +49,15 @@
         <item>Semiconductor devices</item>
         <item>Applied physics</item>
         <item>Environmental science</item>
-        <item></item>
+        <item> </item>
     </string-array>
 
-    <string-array name="Sem2_marks">
+    <string-array name="BSc_sem2_marks">
         <item>9</item>
         <item>9</item>
         <item>9</item>
         <item>9</item>
-        <item></item>
+        <item> </item>
     </string-array>
 
     <string name="BSc_sem2_SGPA">9</string>
@@ -62,7 +70,7 @@
         <item>Robotics</item>
     </string-array>
 
-    <string-array name="Sem3_marks">
+    <string-array name="BSc_sem3_marks">
         <item>9</item>
         <item>8</item>
         <item>10</item>
@@ -80,7 +88,7 @@
         <item>Mobile application development</item>
     </string-array>
 
-    <string-array name="Sem4_marks">
+    <string-array name="BSc_sem4_marks">
         <item>9</item>
         <item>7</item>
         <item>7</item>
@@ -95,15 +103,15 @@
         <item>Electromagnetics</item>
         <item>Semiconductor fabrication and characterization</item>
         <item>Computer networks</item>
-        <item></item>
+        <item> </item>
     </string-array>
 
-    <string-array name="Sem5_marks">
+    <string-array name="BSc_sem5_marks">
         <item>9</item>
         <item>7</item>
         <item>8</item>
         <item>8</item>
-        <item></item>
+        <item> </item>
     </string-array>
 
     <string name="BSc_sem5_SGPA">8</string>
@@ -113,18 +121,90 @@
         <item>Communication electronics</item>
         <item>Modern communication systems</item>
         <item>Embedded systems</item>
-        <item></item>
+        <item> </item>
     </string-array>
 
-    <string-array name="Sem6_marks">
+    <string-array name="BSc_sem6_marks">
         <item>9</item>
         <item>8</item>
         <item>9</item>
         <item>10</item>
-        <item></item>
+        <item> </item>
     </string-array>
 
     <string name="BSc_sem6_SGPA">9</string>
+
+    <string-array name="MSc_sem1_subjects">
+        <item>Software Design &amp; Programming</item>
+        <item>Algorithms and Data Structure</item>
+        <item>Computer System Architecture</item>
+        <item>Mathematical Foundation</item>
+        <item> </item>
+    </string-array>
+
+    <string-array name="MSc_sem1_marks">
+        <item>9</item>
+        <item>9</item>
+        <item>9</item>
+        <item>8</item>
+        <item> </item>
+    </string-array>
+
+    <string name="MSc_sem1_SGPA">8.75</string>
+
+    <string-array name="MSc_sem2_subjects">
+        <item>WEB &amp; MOBILE APPLICATION DEVELOPMENT FRAMEWORKS</item>
+        <item>Computer Communication and Networks</item>
+        <item>Database Systems</item>
+        <item>Applied Machine Learning</item>
+        <item>OPERATING SYSTEMS</item>
+    </string-array>
+
+    <string-array name="MSc_sem2_marks">
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item> </item>
+    </string-array>
+
+    <string name="MSc_sem2_SGPA">-</string>
+
+    <string-array name="MSc_sem3_subjects">
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="MSc_sem3_marks">
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+    </string-array>
+
+    <string name="MSc_sem3_SGPA">-</string>
+
+    <string-array name="MSc_sem4_subjects">
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="MSc_sem4_marks">
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+    </string-array>
+
+    <string name="MSc_sem4_SGPA">-</string>
 
     <string name="Subject">Paper</string>
     <string name="Marks">Grade points</string>
