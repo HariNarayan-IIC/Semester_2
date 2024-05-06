@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Integer seconds = 0;
     TextView timerTextView;
     Handler handler;
+    private static final String KEY_STOPWATCH_TIME = "stopwatchTime";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,24 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         timerTextView = findViewById(R.id.timerTextView);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_STOPWATCH_TIME, seconds);
+        outState.putBoolean("Status", running);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        seconds = savedInstanceState.getInt(KEY_STOPWATCH_TIME);
+        running = savedInstanceState.getBoolean("Status");
+
+        if (running) {
+            runTimer();
+        }
     }
 
     public void onButtonStartClick(View view) {
