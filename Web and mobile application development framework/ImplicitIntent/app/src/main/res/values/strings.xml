@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ImplicitIntent</string>
+    <string name="hint">Enter message</string>
+    <string name="button1">Send explicit</string>
+    <string name="button2">Send implicit</string>
+    <string name="ReceiverText">Received message: </string>
+</resources>
